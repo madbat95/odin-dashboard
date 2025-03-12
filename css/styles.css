@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --bar-btn-color: rgb(69, 141, 249);
+    --accent-color: #ffb121e1;
+    --background-color: #e5e8f1;
+    --foreground-color: #ffffff;
+    --first-text-color: #fff;
+    --second-text-color: #222;
+    --hover-text-color: rgb(101, 100, 100);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+/* sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--bar-btn-color);
+    color: var(--foreground-color);
+}
+
+.sidebar-medium {
+    padding-top: 4rem;
+}
+
+.sidebar-bottom {
+    padding-top: 4rem;
+}
+
+.sidebar-medium,
+.sidebar-bottom {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.dashboard-icon {
+    filter: invert(100%);
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+.sidebar-icon {
+    filter: invert(100%);
+    width: 3.8rem;
+    height: 1.8rem;
+    grid-column: 1 / 2;
+}
+
+.sidebar-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.sidebar-link {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.sidebar-link-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+a.sidebar-link {
+    text-decoration: none;
+    color: var(--first-text-color);
+    transition: 0.2 ease-in-out;
+}
+
+.sidebar-link:hover {
+    text-decoration: underline;
+    transition: 0.2 ease-in-out;
+}
+
+.credits-bottom {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding-top: 10rem;
+    padding-left: 1rem;
+}
+
+.github-icon {
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.github-icon:hover {
+    color: var(--background-color);
+}
+
+/* header */
+
+.header-row {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: var(--foreground-color);
+    box-shadow: 2px 2px 2px 2px #babcc5;
+    padding: 0.6rem 3rem;
+}
+/* header top row */
+.top-row {
+    display: grid;
+    grid-template-columns: minmax(200px, 4fr) 1fr;
+    grid-row: 1 / 2;
+    align-items: center;
+}
+
+.header-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.search-bar {
+    width: 80%;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+.input-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-block {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-name {
+    font-size: 1.4rem;
+}
+
+.smol-pfp {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.smol-pfp:hover {
+    cursor: pointer;
+    border: 2px solid var(--bar-btn-color);
+}
+
+.bell {
+    border-radius: 50%;
+    transition: 0.2 ease-in-out;
+}
+
+.bell:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+}
+/* header bottom row */
+
+.bottom-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 70% 30%;
+    padding: 0.6rem 0;
+    align-items: center;
+}
+
+.big-pfp {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.big-pfp:hover {
+    cursor: pointer;
+    border: 2px solid var(--bar-btn-color);
+}
+
+.tiny-greeting {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.user-greetings {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.fun-btns {
+    display: flex;
+    gap: 2rem;
+}
+
+.fun-btn {
+    width: 6.8rem;
+    height: 2.5rem;
+    background-color: var(--bar-btn-color);
+    color: var(--first-text-color);
+    border: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.2s ease-in-out;
+}
+
+.fun-btn:hover {
+    cursor: pointer;
+    background-color: rgb(58, 119, 210);
+}
+
+/* main content */
+.main-content {
+    display: grid;
+    min-height: 100vh;
+}
+
+.content-column {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    background-color: var(--background-color);
+    padding: 1.2rem;
+    padding-top: 2rem;
+}
+
+.column-title {
+    font-size: 1.4rem;
+}
+
+.all-projects-block {
+    display: grid;
+    padding: 1rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.4rem;
+    background-color: var(--foreground-color);
+    border-left: 0.5rem solid var(--accent-color);
+    border-radius: 0.5rem;
+    padding-bottom: 2rem;
+    transition: 0.2s ease;
+}
+
+.project-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.project-description {
+    font-size: 1rem;
+    padding-top: 0.4rem;
+    color: var(--hover-text-color);
+    width: 40ch;
+    height: 7rem;
+}
+
+.icons-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.card-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.card-icon:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+    border-radius: 50%;
+}
+
+/* second column */
+
+.announcements-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 1rem;
+    padding-top: 1.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--foreground-color);
+    border-radius: 0.5rem;
+}
+
+.announcement-spot {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: var(--foreground-color);
+}
+
+.announcement-description {
+    padding-top: 0.4rem;
+    color: var(--hover-text-color);
+} 
+
+.announcement-one,
+.announcement-two {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-bottom: 1rem;
+}
+
+/* trending */
+
+.trending-title {
+    padding: 1rem 0;
+}
+
+.all-trending-users {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1.38rem 1.4rem;
+    background-color: var(--foreground-color);
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.user-block {
+    display: flex;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.handle {
+    font-weight: 700;
+}
+
+.userapp {
+    color: var(--hover-text-color);
+}
