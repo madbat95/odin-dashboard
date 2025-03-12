@@ -2,4 +2,4 @@
 
 ## #2 Project: Admin Dashboard
 
-Admin dashboard layout made with the purpose of practicing grid. Not required to be responsive, but I'd like it to be.
+Admin dashboard made for the final assessment of css/html. onto javascript next!
